@@ -8,7 +8,7 @@ while True:
     url = val + "/" + line.replace("\n","")
     response = requests.get(url)
     if response.status_code == 200 or response.status_code == 302:
-        print(url + "   " + str(response.status_code))
+        print(url + "  [Status Code  " + str(response.status_code) + "]")
     if not line:
         break
 sample_word.close()
